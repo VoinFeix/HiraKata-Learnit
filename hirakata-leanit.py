@@ -89,6 +89,8 @@ class HiraKata_Learnit:
 
                 for line in content:
                     self.scoresHistoryText.insert(tk.END, line)
+
+                self.scoresHistoryText.config(state='disabled')
         except FileNotFoundError:
             messagebox.showerror('Scores History', 'No history found', parent=self.scoresHistory_popup)
             self.exitScoresHistory_func()
